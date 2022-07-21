@@ -1,23 +1,19 @@
 {
-  "name": "resume",
-  "version": "1.0.0",
-  "description": "Resume for Dan Wood",
+  "name": "test",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "start": "tailwind build tailwind.src.css -o style.css",
-    "build": "NODE_ENV=production tailwind build tailwind.src.css -o style.css"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/valtism/resume.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/valtism/resume/issues"
-  },
-  "homepage": "https://github.com/valtism/resume#readme",
-  "dependencies": {
-    "tailwindcss": "^2.0.1"
+  "devDependencies": {
+    "autoprefixer": "^10.4.7",
+    "postcss": "^8.4.14",
+    "prettier": "^2.7.1",
+    "prettier-plugin-tailwindcss": "^0.1.12",
+    "tailwindcss": "^3.1.6",
+    "vite": "^3.0.0"
   }
 }

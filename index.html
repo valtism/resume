@@ -8,28 +8,29 @@
     <link rel="shortcut icon" href="favicon.png" />
     <title>Dan Wood - Résumé</title>
   </head>
+
   <body>
     <div
-      class="max-w-xl mx-auto md:my-6 lg:my-10 font-mono leading-snug bg-gray-900 text-xs text-gray-300 rounded border border-gray-700 shadow-xl"
+      class="mx-auto max-w-xl rounded border border-gray-700 bg-gray-900 font-mono text-xs leading-snug text-gray-300 shadow-xl md:my-6 lg:my-10"
     >
       <div
-        class="title-bar flex flex-no-wrap px-2 py-1 rounded-t border-b border-black shadow"
+        class="title-bar flex-no-wrap flex rounded-t border-t border-b-black border-t-gray-300/30 px-2 py-1 shadow"
       >
-        <div class="flex-1 whitespace-no-wrap pr-4">
+        <div class="whitespace-no-wrap flex-1 pr-4 cursor-default">
           <svg
-            class="inline-block w-3 h-3 fill-current text-red-500"
+            class="inline-block h-3 w-3 fill-current text-red-500"
             viewBox="0 0 100 100"
           >
             <circle cx="50" cy="50" r="50" />
           </svg>
           <svg
-            class="inline-block w-3 h-3 fill-current text-yellow-500"
+            class="inline-block h-3 w-3 fill-current text-yellow-500"
             viewBox="0 0 100 100"
           >
             <circle cx="50" cy="50" r="50" />
           </svg>
           <svg
-            class="inline-block w-3 h-3 fill-current text-green-500"
+            class="inline-block h-3 w-3 fill-current text-green-500"
             viewBox="0 0 100 100"
           >
             <circle cx="50" cy="50" r="50" />
@@ -46,9 +47,8 @@
           <span>Last login:</span>
           <span id="datetime">Mon Jan 06 2020 15:33:16</span>
           <script>
-            document.getElementById(
-              "datetime"
-            ).innerHTML = new Date().toString();
+            document.getElementById("datetime").innerHTML =
+              new Date().toString();
           </script>
           <span>on ttys02</span>
         </div>
@@ -71,7 +71,7 @@
           <span class="pr-4">education.txt</span>
           <span class="pr-4">specializations.txt</span>
           <span class="pr-4">contact.txt</span>
-          <span class="pr-4 font-bold underline text-orange-300"
+          <span class="pr-4 font-bold text-orange-300 underline"
             >README.md</span
           >
           <span class="pr-4">work.txt</span>
@@ -115,7 +115,6 @@
               <td class="pr-4">- ReactJS</td>
               <td class="pr-4">*****</td>
             </tr>
-            </tr>
             <tr>
               <td class="pr-4">- NodeJS</td>
               <td class="pr-4">****</td>
@@ -131,6 +130,7 @@
             <tr>
               <td class="pr-4">- AWS &amp; GCP</td>
               <td class="pr-4">**</td>
+            </tr>
             <tr>
               <td class="pr-4">- GraphQL</td>
               <td class="pr-4">**</td>
@@ -149,7 +149,10 @@
         <div class="mb-4">
           <div class="mt-4"># Pry</div>
           <div>Frontend Developer</div>
-          <div>March 2020</div>
+          <div>March 2020 - April 2022</div>
+          <div>- Lead frontend development across entire app</div>
+          <div>- Spearheaded efforts to move to Vite, Tailwind and Typescript</div>
+          <div>- Built complex extensible dashboards for real-time data visualisation</div>
           <div class="mt-4"># Qwilr</div>
           <div>Fullstack Developer</div>
           <div>August 2019 - November 2019</div>
@@ -224,7 +227,7 @@
         </div>
         <div>
           <span class="text-pink-300">❯</span>
-          <span class="blinking-cursor">█</span>
+          <span class="animate-blink">█</span>
         </div>
         <div class="py-5"></div>
       </div>
