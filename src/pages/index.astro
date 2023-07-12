@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Terminal from "../components/Terminal.astro";
+import LastLogin from "../components/LastLogin.astro";
 import Command from "../components/Command.astro";
 import Specialization from "../components/Specialization.astro";
 import Workplace from "../components/Workplace.astro";
@@ -8,14 +9,7 @@ import Workplace from "../components/Workplace.astro";
 
 <Layout title="Dan Wood - Résumé">
 	<Terminal>
-		<span
-			>Last login: {
-				new Date().toLocaleString("en-US", {
-					dateStyle: "full",
-					timeStyle: "medium",
-				})
-			} on ttys02</span
-		>
+		<LastLogin />
 
 		<Command pwd="~" branch="" command="cd" target="Developer/resume" />
 

@@ -1,0 +1,13 @@
+<span>
+  <span>Last login:</span>
+  <span id="login-time">Wednesday, July 12, 2023 at 1:49:46 AM</span>
+  <span> on ttys02</span>
+</span>
+
+<script>
+  document.querySelector("#login-time")!.textContent =
+    new Date().toLocaleString("en-US", {
+      dateStyle: "full",
+      timeStyle: "medium",
+    });
+</script>
