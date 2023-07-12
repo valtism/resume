@@ -1,0 +1,15 @@
+---
+export interface Props {
+  name: string;
+  title: string;
+  date: string;
+  achievements: string[];
+}
+
+const { name, title, date, achievements } = Astro.props;
+---
+
+<div class="mt-4 font-bold"># {name}</div>
+<div>{title}</div>
+<div>{date}</div>
+{achievements.map((achievement) => <div>- {achievement}</div>)}

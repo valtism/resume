@@ -1,0 +1,154 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Terminal from "../components/Terminal.astro";
+import Command from "../components/Command.astro";
+import Specialization from "../components/Specialization.astro";
+import Workplace from "../components/Workplace.astro";
+---
+
+<Layout title="Dan Wood - Résumé">
+	<Terminal>
+		<span
+			>Last login: {
+				new Date().toLocaleString("en-US", {
+					dateStyle: "full",
+					timeStyle: "medium",
+				})
+			} on ttys02</span
+		>
+
+		<Command pwd="~" branch="" command="cd" target="Developer/resume" />
+
+		<Command command="ls" />
+		<div class="mb-4 flex flex-wrap">
+			<span class="pr-4">certifications.txt</span>
+			<span class="pr-4">education.txt</span>
+			<span class="pr-4">specializations.txt</span>
+			<span class="pr-4">contact.txt</span>
+			<span class="pr-4 font-bold text-orange-300 underline">README.md</span>
+			<span class="pr-4">work.txt</span>
+		</div>
+
+		<Command command="cat" target="README.md" />
+
+		<div class="flex flex-col gap-4">
+			<div>&lt;!-- About --&gt;</div>
+			<div>
+				# Hi there! I'm <span class="font-bold">Dan Wood</span>
+			</div>
+			<div>I work as a ~ full stack developer ~</div>
+			<div>
+				I'm a passionate dev with a focus on creating quality, functional and
+				maintainable codebases. I have a love for UI / UX and design.
+			</div>
+		</div>
+
+		<Command command="cat" target="specializations.txt" />
+		<table class="mt-4">
+			<Specialization name="TypeScript" stars={5} />
+			<Specialization name="Javascript" stars={5} />
+			<Specialization name="ReactJS" stars={5} />
+			<Specialization name="Tailwind" stars={5} />
+			<Specialization name="Redux" stars={5} />
+			<Specialization name="SQL" stars={4} />
+			<Specialization name="Accessibility" stars={4} />
+			<Specialization name="VisX" stars={4} />
+			<Specialization name="AWS & GCP" stars={3} />
+			<Specialization name="GraphQL" stars={3} />
+			<Specialization name="Astro" stars={3} />
+		</table>
+
+		<Command command="cat" target="work.txt" />
+		<Workplace
+			name="Tofi & Plutora"
+			title="Fullstack Developer"
+			date="February 2017 - August 2019"
+			achievements={[
+				"Developed large enterprise SPA for dev teams",
+				"Maintained and developed large legacy codebase",
+				"Started successful knowledge-sharing sessions",
+				"Worked across both front and back end",
+			]}
+		/>
+		<Workplace
+			name="Qwilr"
+			title="Fullstack Developer"
+			date="August 2019 - November 2019"
+			achievements={[
+				"Redesigned app dashboard with React JS & Typescript",
+				"Implemented new search using ElasticSearch",
+				"Started organising team Health Checks across company",
+			]}
+		/>
+		<Workplace
+			name="Pry"
+			title="Frontend Developer"
+			date="March 2020 - April 2022"
+			achievements={[
+				"Lead frontend development across entire app",
+				"Spearheaded efforts to move to Vite, Tailwind and Typescript",
+				"Built complex extensible dashboards for real-time data visualisation",
+			]}
+		/>
+		<Workplace
+			name="Brex"
+			title="Frontend Developer"
+			date="April 2022 - Present"
+			achievements={[
+				"Managed lage-scale migration effort to integrate existing app into new company",
+				"Mentored junior developers getting acclimated to new codebase",
+				"Solo managed large projects and feture builds",
+			]}
+		/>
+
+		<Command command="cat" target="education.txt" />
+		<Workplace
+			name="University of Technology, Sydney"
+			title="Bachelor of Mechanical and Mechatronics Engineering"
+			date="2011 - 2017"
+			achievements={[
+				"Created and programmed robots and microcontrollers",
+				"Studied advanced mathematics and control theory",
+			]}
+		/>
+
+		<Command command="cat" target="certifications.txt" />
+		<div class="mb-4">
+			<div class="mt-4">2018 - 2019</div>
+			<div>Microsoft 70-483 - Programming in C#</div>
+			<div>Microsoft 70-486 - Developing ASP.NET MVC Web Applications</div>
+			<div>Tyler McGinnis - React</div>
+			<div>Tyler McGinnis - React Hooks</div>
+		</div>
+
+		<Command command="cat" target="contact.txt" />
+		<div class="mb-4">
+			<div class="mt-4">🇦🇺 Sydney, Australia -✈ Oakland, California 🇺🇸</div>
+			<div>
+				Email:
+				<a class="underline" href="mailto:daniel4wood@icloud.com"
+					>daniel4wood@icloud.com</a
+				>
+			</div>
+			<div>
+				Github:
+				<a class="underline" href="https://github.com/valtism">@valtism</a>
+			</div>
+		</div>
+
+		<Command><span class="animate-blink">█</span></Command>
+		<div class="py-5"></div>
+	</Terminal>
+</Layout>
+
+<style>
+	@keyframes blink {
+		50% {
+			visibility: hidden;
+		}
+	}
+
+	.animate-blink {
+		animation: blink 1s step-end infinite;
+	}
+</style>

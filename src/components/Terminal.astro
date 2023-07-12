@@ -1,0 +1,12 @@
+---
+import TitleBar from "../components/TitleBar.astro";
+---
+
+<div
+  class="mx-auto max-w-xl rounded border border-gray-700 bg-neutral-900 font-mono text-xs leading-snug text-gray-300 shadow-xl md:my-6 lg:my-10"
+>
+  <TitleBar />
+  <div class="p-1">
+    <slot />
+  </div>
+</div>

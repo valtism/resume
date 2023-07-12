@@ -1,0 +1,26 @@
+---
+export interface Props {
+  pwd?: string;
+  branch?: string;
+  command?: string;
+  target?: string;
+}
+
+const {
+  pwd = "~/Developer/resume",
+  branch = "main",
+  command,
+  target,
+} = Astro.props;
+---
+
+<div class="mt-4">
+  <span class="text-blue-200">{pwd}</span>
+  <span class="text-gray-500">{branch}</span>
+</div>
+<div>
+  <span class="text-pink-300">❯</span>
+  <span class="text-yellow-300">{command}</span>
+  <span class="text-pink-300 underline">{target}</span>
+  <slot />
+</div>

@@ -1,0 +1,38 @@
+---
+export interface Props {
+  name: string;
+  stars: number;
+}
+
+const { name, stars } = Astro.props;
+---
+
+<tr>
+  <td class="pr-6">- {name}</td>
+  <td class="text-yellow-100"
+    >{
+      Array(stars)
+        .fill(null)
+        .map((_, i) => (
+          <span
+            class="animate-twinkle tracking-tightest -ml-1.5"
+            style={`--animation-order: ${i};`}
+          >
+            *
+          </span>
+        ))
+    }</td
+  >
+</tr>
+
+<style>
+  @keyframes twinkle {
+    50% {
+      opacity: 0.8;
+    }
+  }
+  .animate-twinkle {
+    animation: twinkle 2s cubic-bezier(0.9, 0, 0.9, 1) infinite;
+    animation-delay: calc(var(--animation-order) * 100ms);
+  }
+</style>
