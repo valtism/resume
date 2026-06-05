@@ -7,13 +7,13 @@ A cute lil' resume based on my terminal.
 Install dependencies:
 
 ```bash
-npm install
+bun install
 ```
 
 Run dev server:
 
 ```bash
-npm run dev
+bun run dev
 ```
 
 # Run production build lcoally
@@ -21,17 +21,17 @@ npm run dev
 Install dependencies:
 
 ```bash
-npm install
+bun install
 ```
 
 Build for production:
 
 ```bash
-npm run build
+bun run build
 ```
 
 Serve production build:
 
 ```bash
-npm run preview
+bun run preview
 ```
